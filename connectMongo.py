@@ -138,11 +138,23 @@ mongo_coll = mongo_db[collection_name]
 
 
 
+# dbMongoClient = client["leisure_centre"]['Course']
+# min_lesson_id = dbMongoClient.find_one ({}, sort=[("CourseID", 1)])["CourseID"]
+
+# print("Exercise D1 - Min LessonID:", min_lesson_id)
 
 
+# dbMongoClient = client["leisure_centre"]['Members']
+# max_members_id = dbMongoClient.find_one ({}, sort=[("MemberID", -1 )])["MemberID"]
 
+# print("Exercise D1 - Max MemberID:", max_members_id)
 
+# dbMongoClient = client["leisure_centre"]['Members']
 
+# total_members_id = dbMongoClient.count_documents({})
+# print("Total Members:", total_members_id)
 
+dbMongoClient = client["leisure_centre"]['Course']
 
-
+total_sessions=dbMongoClient.count_documents({})
+print("Total Sessions:", total_sessions)
