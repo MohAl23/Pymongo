@@ -154,7 +154,14 @@ mongo_coll = mongo_db[collection_name]
 # total_members_id = dbMongoClient.count_documents({})
 # print("Total Members:", total_members_id)
 
-dbMongoClient = client["leisure_centre"]['Course']
+# dbMongoClient = client["leisure_centre"]['Course']
 
-total_sessions=dbMongoClient.count_documents({})
-print("Total Sessions:", total_sessions)
+# total_sessions=dbMongoClient.count_documents({})
+# print("Total Sessions:", total_sessions)
+
+## F. WILDCARD queries (regex operator)
+
+# dbMongoClient = client["leisure_centre"]['Members']
+# member_id = dbMongoClient.find({"Surname": {"$regex":"^A"}})
+# for doc in member_id:
+#  print("Last name:", doc)
